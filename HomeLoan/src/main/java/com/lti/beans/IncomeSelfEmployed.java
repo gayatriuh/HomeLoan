@@ -1,5 +1,5 @@
 package com.lti.beans;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +24,7 @@ public class IncomeSelfEmployed {
 	@Column(name="NATUREOFBUSINESS",length=50)
 	private String natureOfBusiness;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="USERID")
 	private User user;
 

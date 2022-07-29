@@ -1,6 +1,6 @@
 package com.lti.beans;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +29,7 @@ public class IncomeSalaried {
 	private String organization;
 	
     
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="USERID")
 	private User user;
 

@@ -34,7 +34,7 @@ public class Loan {
 	@Column(name="EMIAMOUNT",length=30)
 	private double emiAmount;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="USERID")
 	private User user;
 

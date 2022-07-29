@@ -1,5 +1,6 @@
 package com.lti.beans;
-import javax.persistence.CascadeType;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +28,7 @@ public class Property {
 	@Column(name="AMOUNT",length=30)
 	private double amount;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="USERID")
 	private User user;
 
@@ -43,6 +44,46 @@ public class Property {
 	public Property() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public int getPropertyId() {
+		return propertyId;
+	}
+
+	public void setPropertyId(int propertyId) {
+		this.propertyId = propertyId;
+	}
+
+	public String getPropertyName() {
+		return propertyName;
+	}
+
+	public void setPropertyName(String propertyName) {
+		this.propertyName = propertyName;
+	}
+
+	public String getPropertyLocation() {
+		return propertyLocation;
+	}
+
+	public void setPropertyLocation(String propertyLocation) {
+		this.propertyLocation = propertyLocation;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override
