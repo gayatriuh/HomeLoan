@@ -28,6 +28,14 @@ public class ApplicationStatus {
 	@JoinColumn(name="USERID")
 	private User user;
 	
+	
+	
+	public ApplicationStatus(String applicationId, String appointmentDate, User user) {
+		super();
+		this.applicationId = applicationId;
+		this.appointmentDate = appointmentDate;
+		this.user = user;
+	}
 	public ApplicationStatus() {
 		super();
 	}
@@ -43,19 +51,18 @@ public class ApplicationStatus {
 	public void setAppointmentDate(String appointmentDate) {
 		this.appointmentDate = appointmentDate;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
+	
 	public User getUser() {
 		return user;
 	}
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+	@Override
+	public String toString() {
+		return "ApplicationStatus [applicationId=" + applicationId + ", appointmentDate=" + appointmentDate
+				+ ", status=" + status + ", user=" + user + "]";
+	}
 	
 }
 

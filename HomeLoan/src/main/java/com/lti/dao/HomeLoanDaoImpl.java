@@ -89,6 +89,7 @@ public class HomeLoanDaoImpl implements HomeLoanDao {
 		 else return null;
 		}
 
+	@Transactional
 	public boolean addIncomeSalariedInfo(IncomeSalaried incomeSalaried) {
 
 		 boolean flag=false;
