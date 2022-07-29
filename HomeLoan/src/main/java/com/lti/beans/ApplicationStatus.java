@@ -1,8 +1,4 @@
 package com.lti.beans;
-
-
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

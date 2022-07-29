@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.beans.ApplicationStatus;
-import com.lti.dao.LoanTracker;
+import com.lti.dao.LoanTrackerDao;
 
 
 @Service("loanTrackerService")
 public class LoanTrackerServiceImpl implements LoanTrackerService {
 	
 	@Autowired
-	public LoanTracker loanTrackerDao;
+	public LoanTrackerDao loanTrackerDao;
 
 	@Transactional
 	public ApplicationStatus trackLoan(String applicationId) {
