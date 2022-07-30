@@ -4,5 +4,5 @@ LTI HOME LOAN PROJECT BY GROUP 6
 Group Members 
 Harshit Garg
 Raman Bankra
-Gaytri 
-Kshitij
+Gayatri Hajare
+Kshitij Girkar
