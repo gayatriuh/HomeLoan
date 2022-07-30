@@ -5,4 +5,4 @@ Group Members
 Harshit Garg
 Raman Bankra
 Gaytri 
-Ksitij
+Kshitij
