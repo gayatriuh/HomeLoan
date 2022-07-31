@@ -28,7 +28,6 @@ public class HomeLoanController {
 	@PostMapping("/adduser")
 	public boolean registerUser(@RequestBody User user) {
 		return hlservice.registerUser(user);
-		
 	}
 	
 	
@@ -39,7 +38,7 @@ public class HomeLoanController {
 		
 	}
 	
-	@GetMapping("/userlogin")
+	@PostMapping("/userlogin")
 	public User userlogin(@RequestBody User user) {
 		return hlservice.loginProcess(user);
 		

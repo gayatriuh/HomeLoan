@@ -63,6 +63,7 @@ public class HomeLoanDaoImpl implements HomeLoanDao {
 	    return flag;
 	}
 
+	@Transactional
 	public User loginProcess(User users) {
 		
 		int flag = 0;
@@ -71,9 +72,7 @@ public class HomeLoanDaoImpl implements HomeLoanDao {
 			   
 				String emailid =  users.getEmail();
 				String password = users.getPassword();
-				
-				u = (User)em.createQuery("select u from Users u where  u.email=:emailid").setParameter("emailid", emailid).getSingleResult();
-				
+				u = (User)em.createQuery("select u from User u where  u.email=:emailid").setParameter("emailid", emailid).getSingleResult();
 				if(( u.getEmail().equals(emailid) ) && ( u.getPassword().equals(password) ) ) {
 					
 					flag = 1;
